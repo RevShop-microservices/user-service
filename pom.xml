@@ -29,6 +29,7 @@
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2023.0.3</spring-cloud.version>
+		<skipTests>true</skipTests>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -159,7 +160,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.2.5</version>
 				<configuration>
-					<skipTests>true</skipTests>
+					<skipTests>${skipTests}</skipTests>
 					<systemPropertyVariables>
 						<net.bytebuddy.experimental>true</net.bytebuddy.experimental>
 					</systemPropertyVariables>
